@@ -1,0 +1,15 @@
+<launch>
+    <!-- Default parameters -->
+    <arg name="data_source" default="ROS"/>  <!-- Default to ROS data -->
+    <arg name="selected_model" default="AR"/>  <!-- Default to AR model -->
+    <arg name="order" default="2"/>  <!-- Default order -->
+
+    <!-- Launch the system identification node -->
+    <node name="system_identification_node" pkg="system_iden" type="sysid.py" output="screen">
+        <!-- Pass parameters to the node -->
+        <param name="data_source" value="$(arg data_source)"/>
+        <param name="selected_model" value="$(arg selected_model)"/>
+        <param name="order" value="$(arg order)"/>
+    </node>
+</launch>
+
