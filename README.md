@@ -18,7 +18,7 @@ The System Identification System is a tool designed to identify and model the be
 - SciPy
 - Statsmodels
 - Matplotlib
-- ROS (optional, for ROS integration)
+- ROS Noetic
 
 ## Installation
 
@@ -51,9 +51,9 @@ Source devel/setup.bash
 roslaunch system_iden System_identification.launch data_source:=Random selected_model:=ARX order:=3
 ```
 
-1. Follow the prompts to select the order, model type (AR, ARX, ARMAX, ARARX, ARARMAX )and data source (CSV file, ROS node, or random sample data).
-2. View the model accuracy and predicted data visualization.
-3. Optionally, integrate with ROS for real-time data acquisition and processing.
+2. Follow the prompts to select the order, model type (AR, ARX, ARMAX, ARARX, ARARMAX )and data source (CSV file, ROS node, or random sample data).
+3. View the model accuracy and predicted data visualization.
+4. Optionally, integrate with ROS for real-time data acquisition and processing.
 
 ## Configuration
 
