@@ -1,3 +1,5 @@
+# System Identification System
+
 ## Overview
 
 The System Identification System is a tool designed to identify and model the behavior of a motor system using various time series analysis techniques, including AR, ARX, ARMAX, ARARX, and ARARMAX models. The system can be integrated with ROS for real-time data acquisition and processing.
@@ -23,22 +25,22 @@ The System Identification System is a tool designed to identify and model the be
 1. Create and Configure ROS workspace
 
 ```bash
-$ mkdir -p ~/catkin_ws/src
-$ cd ~/catkin_ws/src
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/src
 ```
 
 1. Clone the repository:
 
 ```bash
-$ git clone https://github.com/SouravSelvaraj/System_Identification_Toolbox_ROS.git
+git clone https://github.com/SouravSelvaraj/System_Identification_Toolbox_ROS.git
 ```
 
 1. Caktin Build
 
 ```bash
-$ cd ..
-$ catkin build
-$ Source devel/setup.bash
+cd ..
+catkin build
+Source devel/setup.bash
 ```
 
 ## Usage
@@ -46,7 +48,7 @@ $ Source devel/setup.bash
 1. Run the system identification node:
 
 ```bash
-$ roslaunch system_iden System_identification.launch data_source:=Random selected_model:=ARX order:=3
+roslaunch system_iden System_identification.launch data_source:=Random selected_model:=ARX order:=3
 ```
 
 1. Follow the prompts to select the order, model type (AR, ARX, ARMAX, ARARX, ARARMAX )and data source (CSV file, ROS node, or random sample data).
