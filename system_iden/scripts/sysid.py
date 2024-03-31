@@ -11,7 +11,7 @@ import csv
 import math
 def generate_sample_data(num_samples):
     t = np.linspace(0, 10, num_samples)  # Generate time points
-    motor_position = np.sin(3*t) + np.cos(t) + np.exp(t) # Generate motor position data using a sine wave
+    motor_position = np.sin(3*t) + np.cos(t)  # Generate motor position data using a sine wave
     return t, motor_position
 
 
@@ -106,9 +106,9 @@ class SystemIdentificationNode:
 
             # Publish model parameters to ROS topic
             self.model_params_pub.publish(Float64(model_params[0]))
-            print(self.order)
-            print(model_params)
-            print(mse,mae)
+            print(f'Order of the system:{self.order}')
+            print(f'Model Parameter:{model_params}')
+            print(f'Maximum Square Error:{mse},Maximum Absolute Error: {mae}')
             # Plot input data and predicted data
             plt.figure()
             plt.plot(t[1:], endog, label='Input Data')
