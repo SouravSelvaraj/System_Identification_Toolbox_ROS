@@ -29,13 +29,13 @@ mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 ```
 
-1. Clone the repository:
+2. Clone the repository:
 
 ```bash
 git clone https://github.com/SouravSelvaraj/System_Identification_Toolbox_ROS.git
 ```
 
-1. Caktin Build
+3. Caktin Build
 
 ```bash
 cd ..
